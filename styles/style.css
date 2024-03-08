@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, hsl(273deg, 75%, 66%), hsl(240deg, 73%, 65%));
+  overflow: hidden;
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+main {
+  display: flex;
+  background: white;
+  border-radius: 2rem;
+}
+
+#logo {
+  width: 450px;
+}
+#logo .overlaps {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  overflow: hidden;
+  height: 100%;
+}
+#logo .overlaps #desktop-pattern {
+  position: absolute;
+  top: -40%;
+  left: -127%;
+}
+#logo .overlaps #desktop-woman {
+  position: relative;
+  top: 18%;
+  left: -22%;
+  z-index: 100;
+}
+#logo .overlaps #mobile-pattern,
+#logo .overlaps #mobile-woman {
+  display: none;
+}
+
+#faq {
+  padding-right: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+#faq h1 {
+  padding-bottom: 1rem;
+  font-size: 30px;
+}
+#faq .question {
+  border-bottom: 2px solid hsl(240deg, 5%, 91%);
+  width: 600px;
+  padding: 0.8rem 0;
+}
+#faq .question .question-title {
+  color: hsl(237deg, 12%, 33%);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.3rem;
+}
+#faq .question .question-title h2 {
+  font-weight: normal;
+}
+#faq .question .question-title .icon {
+  margin-right: 1rem;
+}
+#faq .question .question-title .icon img {
+  width: 15px;
+}
+#faq .question .question-answer {
+  color: hsl(240deg, 6%, 50%);
+  display: none;
+  padding-top: 0.2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    overflow: visible;
+  }
+  main {
+    flex-direction: column;
+  }
+  #logo .overlaps {
+    overflow: visible;
+    bottom: 1%;
+    border: 2px solid red;
+  }
+  #logo .overlaps #desktop-pattern,
+#logo .overlaps #desktop-woman {
+    display: none;
+  }
+  #logo .overlaps #mobile-pattern {
+    display: block;
+    position: relative;
+    left: 20%;
+    top: 2%;
+  }
+  #logo .overlaps #mobile-woman {
+    display: block;
+    position: absolute;
+    top: -130%;
+    left: 15%;
+    width: 300px;
+  }
+  #faq {
+    border: 2px solid green;
+  }
+  #faq .question {
+    width: 400px;
+    border: 2px solid blueviolet;
+    padding: 1rem 1.4rem;
+    margin-left: 10px;
+  }
+  #faq .question .question-title .icon {
+    margin-right: 0;
+  }
+  #faq h1 {
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */
